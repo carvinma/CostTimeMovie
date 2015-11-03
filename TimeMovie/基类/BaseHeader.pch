@@ -1,0 +1,33 @@
+//
+//  BaseHeader.pch
+//  TimeMovie
+//
+
+
+/**
+ *  pch 文件的使用
+ *  1. 创建  在iOS － other － PCH File
+ *  2. 将宏定义，头文件加入到pch文件中，必须写注释
+ *  3. 在编译选项中 加入pch文件路径  Apple LLVM 6.1 language
+ */
+
+#ifndef TimeMovie_BaseHeader_pch
+#define TimeMovie_BaseHeader_pch
+
+// 屏幕的宽高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// SDWebImage
+#import "UIImageView+WebCache.h"
+
+#import "UIViewExt.h"
+
+// 读取json数据
+#import "MovieJSON.h"
+
+
+// 隐藏导航栏的通知名
+#define kHiddenNavigationBar @"hiddenNavigationBar"
+
+#endif
